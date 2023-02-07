@@ -6,17 +6,6 @@ body, html {
   margin: 0;
 }
 
-.bgimg {
-  background-image: url('./background.mp4');
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
-}
-
 .topleft {
   position: absolute;
   top: 0;
@@ -44,7 +33,11 @@ hr {
 </style>
 <body>
 
-<div class="bgimg">
+<div>
+  <div style="position: fixed; top: 0; width: 100%; height: 100%; z-index: -1;">
+ <video src="./background.mp4" width="100%" height="100%" autoplay>
+ Your browser does not support the video tag.
+
   <div class="topleft">
     <p>Logo</p>
   </div>
@@ -56,6 +49,8 @@ hr {
   <div class="bottomleft">
     <p>Some text</p>
   </div>
+    </video>
+</div>
 </div>
 
 <script>
